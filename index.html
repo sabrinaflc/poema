@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,900&display=swap" rel="stylesheet">
+    
+    <title>Poema Estilizado</title>
+
+</head>
+<body>
+    
+    <header>
+        <h3>Esse poema pode ser lido independente de sua ordem.</h3>
+        <h3>Não possui um sentido único, ele é o que você entender.</h3>
+    </header>
+
+    <div class="poesia-container">
+        <div class="poesia-line">EU COMO BRANCO, NUNCA VOU ENTENDER</div>
+        <div class="poesia-line">A DOR DE SER INFERIORIZADO PELA COR.</div>
+        <div class="poesia-line">BUSCO MUDANÇA, MESMO SEM TER A MESMA COR,</div>
+        <div class="poesia-line">POIS O MUNDO É UM IMENSO E PODEMOS VENCER.</div>
+    </div>
+
+    <div class="poesia-container2">
+        <div class="poesia-line2">UMA FAMÍLIA INDO PARA UM CHÁ DE BEBÊ </div>
+        <div class="poesia-line2">FOI ALVO DE 80 TIROS SEGUIDOS NO SEU CARRO.</div>
+        <div class="poesia-line2">NÃO ERA UM TANQUE DE GUERRA NEM NADA,</div>
+        <div class="poesia-line2">FOI MAIS UMA FAMÍLIA NEGRA VIOLENTADA “SEM QUERER”.</div>
+    </div>
+
+    <div class="poesia-container3">
+        <div class="poesia-line3">EU COMO PARDA, NUNCA VOU ENTENDER</div>
+        <div class="poesia-line3">UM OLHAR BAIXO DAQUELES AO MEU REDOR.</div>
+        <div class="poesia-line3">JAMAIS SEREI QUESTIONADA DO MEU PODER,</div>
+        <div class="poesia-line3">MESMO SABENDO QUE FOI FRUTO DO MESMO SUOR.</div>
+    </div>
+
+    <div class="poesia-container4">
+        <div class="poesia-line4">EM LOCAIS DE ENTRETENIMENTO, </div>
+        <div class="poesia-line4">QUE SÓ DEVIA EXISTIR ALEGRIA E RESPEITO,</div>
+        <div class="poesia-line4">VINÍCIUS JUNIOR, ARANHA, E INCONTÁVEIS OUTROS,</div>
+        <div class="poesia-line4">AO INVÉS DE SE DIVERTIREM, SOFRERAM COM PRECONCEITO.</div>
+    </div>
+
+    <script>
+        const containers = document.querySelectorAll('.poesia-container, .poesia-container2, .poesia-container3, .poesia-container4');
+        let index = 0;
+    
+        function showLines() {
+            containers.forEach(container => {
+                container.style.display = 'none';
+            });
+            
+            console.log("Mostrando o contêiner de índice: ", index);
+            
+            index = (index + 1) % containers.length;
+            containers[index].style.display = 'block';
+            
+            console.log("Próximo contêiner de índice: ", index);
+    
+            setTimeout(showLines, 30000); // Troca a cada 40 segundos (40000 milissegundos)
+        }
+    
+        showLines();
+    </script>
+</body>
+</html>
