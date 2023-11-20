@@ -26,7 +26,9 @@ header {
 .poesia-container,
 .poesia-container2,
 .poesia-container3,
-.poesia-container4 {
+.poesia-container4,
+.poesia-container5,
+.poesia-container6{
     display: flex;
     margin-top: 20px; /* Espaço entre cada linha de poesia */
     margin: 20px auto; /* Adiciona margem vertical e centraliza horizontalmente */
@@ -36,6 +38,8 @@ header {
 .poesia-line,
 .poesia-line2,
 .poesia-line3,
-.poesia-line4 {
+.poesia-line4,
+.poesia-line5,
+.poesia-line6 {
     margin-bottom: 10px; /* Espaço entre as linhas de poesia */
 }
